@@ -1,0 +1,37 @@
+.react-pdf__Page__svg {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: block;
+  background-color: white;
+  overflow: hidden;
+  width: 520.2px;
+  height: 673.2px;
+  user-select: none;
+}
+
+.react-pdf__Page__textContent {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: 520.2px;
+  height: 673.2px;
+  color: transparent;
+  pointer-events: none;
+}
+
+.page-no {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  text-align: center;
+  color: aliceblue;
+}
+
+.loader {
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+}
