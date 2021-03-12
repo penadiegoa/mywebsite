@@ -1,17 +1,21 @@
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
-  height: 100%;
+  height: 100vh;
   color: white;
   font-family: 'Roboto', sans-serif;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
+  font-size: calc(12px + 1vmin);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(3,37,76);
+  background: linear-gradient(
+    135deg, 
+    rgba(3,37,76,1) 0%, 
+    rgba(17,103,177,1) 85%, 
+    rgba(24,123,205,1) 100%
+  );
+
+  --nav-background: #242526;
+  --nav-contrast: #FFFFFF;
 }
 
 code {

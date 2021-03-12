@@ -1,0 +1,17 @@
+.quote-container {
+  position: absolute;
+  right: 6%;
+  bottom: 6%;
+}
+
+.quote-title {
+  text-align: start;
+}
+
+.quote-body {
+ text-align: center;
+}
+
+.quote-author {
+  text-align: end;
+}

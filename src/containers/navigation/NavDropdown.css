@@ -1,0 +1,8 @@
+.nav-dropdown {
+  position: absolute;
+  max-width: fit-content;
+  background: var(--nav-background);
+  list-style-type: none;
+  padding: 0;
+  margin: 10px -20px;
+}

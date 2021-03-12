@@ -6,50 +6,52 @@ import Projects from './Projects';
 import { 
   Route, 
   Switch, 
-  NavLink, 
   Redirect, 
   BrowserRouter as Router,
 } from 'react-router-dom';
+import NavBar from './containers/navigation/NavBar';
+import NavItem from './containers/navigation/NavItem';
+import NavDropdown from './containers/navigation/NavDropdown';
 
-function App() {
+
+const App = () => {
 
   return (
     <div className="app">
       <Router>
-        <header className="app-header">
-          <div style={{verticalAlign: 'middle'}}>
-            <NavLink exact to="/" className="route" activeClassName="active-route">
-              Home
-            </NavLink>
-            <NavLink to="/resume" className="route" activeClassName="active-route">
-              Resume
-            </NavLink>
-            <NavLink to="/projects" className="route" activeClassName="active-route">
-              Projects
-            </NavLink>
-            <NavLink to="/problems" className="route" activeClassName="active-route">
-              LeetCode Problems
-            </NavLink>
-          </div>
-        </header>
+        
+        <NavBar>
+          <NavItem to="/" title="Home" exact/>
+          <NavItem to="/projects" title="Projects">
+            <NavDropdown>
+              <NavItem to="/projects/tictactoe" title="Tic-Tac-Toe"/>
+              <NavItem to="/projects/todo" title="To Do"/>
+            </NavDropdown>
+          </NavItem>
+          <NavItem to="/problems" title="Problems">
+            <NavDropdown>
+              <NavItem to="/problems/leetcode" title="LeetCode"/>           
+              <NavItem to="/problems/physics" title="Physics"/>           
+            </NavDropdown>
+          </NavItem>
+          <NavItem to="/resume" title="Resume"/>
+        </NavBar>
 
-        <div className="app-body">
-          <Switch>
-            <Route path="/" exact>
-              <Home/>
-            </Route>
-            <Route path="/resume">
-              <Resume/>
-            </Route>
-            <Route path="/projects">
-              <Projects/>
-            </Route>
-            <Route path="/problems">
-              <Problems/>
-            </Route>
-            <Redirect to="/"/>
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/" exact>
+            <Home/>
+          </Route>
+          <Route path="/resume">
+            <Resume/>
+          </Route>
+          <Route path="/projects">
+            <Projects/>
+          </Route>
+          <Route path="/problems">
+            <Problems/>
+          </Route>
+          <Redirect to="/"/>
+        </Switch>
 
       </Router>
     </div>

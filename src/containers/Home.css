@@ -1,5 +1,18 @@
-.home-msg {
-  position: absolute;
-  left: 25%;
-  top: 25%;
+.home {
+  display: block;
+  width: 100%;
+}
+
+.home-content {
+  margin: 15% auto;
+  max-inline-size: max-content;
+}
+
+.welcome-title {
+  font-size: calc(16px + 2vw);
+  font-weight: bold;
+}
+
+.welcome-body {
+  padding: 20px 0 0 0;
 }

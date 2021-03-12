@@ -1,11 +1,40 @@
+import { useEffect, useState } from 'react';
+import Quote from './Quote';
+import axios from 'axios';
 import './Home.css';
 
 const Home = () => {
+
+  const [dailyQuote, setDailyQuote] = useState({quote:'', author: ''}); 
+
+  const config = {
+    headers: { 'Content-Type': 'application/json' },
+    params: { language: 'en' }
+  };
+
+  useEffect(() => {
+    axios.get('https://quotes.rest/qod', config)
+      .then(resp => {
+        setDailyQuote({
+          quote: resp.data.contents.quotes[0].quote,
+          author: resp.data.contents.quotes[0].author
+        });
+      }).catch(error => {
+        console.log('Quote Error:', error);
+      });
+  }, []);
+
   return (
-    <div className="home-msg">
-      <h1>Hi, welcome to Diego's World!</h1>
-      <h4>Feel free to take a look at the projects I have built in the past, as well as my resume.</h4>
-      <h4>I also try to frequently post LeetCode problem solutions with detail explanations.</h4>
+    <div className="home">
+      <div className="home-content">
+        <div className="welcome-title">Hi, welcome to Diego's World!</div>
+        <div className="welcome-body">Feel free to explore some of the projects I have built, as well as my latest resume.</div>
+        <div className="welcome-body">I also try to post detailed explanations of some of my favorite Physics/CS problems.</div>
+      </div>
+      <Quote 
+        quote={dailyQuote.quote} 
+        author={dailyQuote.author}
+        />
     </div>
   )
 }

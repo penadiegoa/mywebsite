@@ -1,0 +1,18 @@
+.nav-item {
+  color: var(--nav-contrast);
+  padding: 10px 20px;
+}
+
+.nav-item:hover {
+  background: #ffffff08;
+}
+
+.nav-item-link {
+  color: white;
+  text-decoration: none;
+}
+
+.active-nav-item,
+.active-nav-item:hover {
+  background: #ffffff15;
+}

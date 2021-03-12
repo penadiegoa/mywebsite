@@ -1,11 +1,13 @@
 import './Problems.css';
-import fizzbuzz from '../assets/svg/fizzbuzz.svg';
 
 const Problems = props => {
   return (
     <div className="comp-container">
-      <h2>The nicests LeetCode Problems I've solved and their solutions!</h2>
-      <img src="/docs/fizzbuzz.svg" sizes alt="fizzbuzz"/>
+      <p>Under construction...</p>
+      <p>Nice LeetCode problems with detailed solutions:</p>
+      <img src="assets/svg/fizzbuzz.svg" alt="fizzbuzz"/>
+      <img src="assets/svg/arithslices.svg" alt="arith_slices"/>
+      <img src="assets/svg/minremvalidparen.svg" alt="min_ren_valid_paren"/>
     </div>
   );
 };

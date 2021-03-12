@@ -31,7 +31,7 @@ const Resume = () => {
       <Document
         renderMode="svg"
         className="res-doc"
-        file="/docs/myresume.pdf"
+        file="assets/docs/myresume.pdf"
         onLoadSuccess={onDocumentLoadSuccess}
         loading={loader}
         onLoadError={() => {console.log("Couldn't load pdf :(")}}
