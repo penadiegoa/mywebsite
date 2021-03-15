@@ -1,0 +1,49 @@
+.row {
+  display: flex;
+}
+.square {
+  width: 130px;
+  height: 130px;
+  background-color: #ddd;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 90px;
+  font-weight: 400;
+  color: white
+}
+.board {
+  background-color: #eee;
+  width: 422px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border: 3px #eee solid
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column
+}
+.instructions {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  font-weight: bold;
+  font-size: 25px;
+}
+.button {
+  margin-top: 15px;
+  margin-bottom: 16px;
+  width: 80px;
+  height: 40px;
+  background-color: #8acaca;
+  color: white;
+  font-size: 16px;
+}
+
+.winner {
+  text-align: center;
+  margin: 15px;
+}

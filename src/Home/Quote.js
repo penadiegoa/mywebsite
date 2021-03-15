@@ -8,6 +8,6 @@ const Quote = props => {
       <div className="quote-author">- {props.author}</div>
     </div>
   )
-}
+};
 
 export default Quote;

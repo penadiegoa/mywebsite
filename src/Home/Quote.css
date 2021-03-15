@@ -2,6 +2,7 @@
   position: absolute;
   right: 6%;
   bottom: 6%;
+  max-width: 50%;
 }
 
 .quote-title {

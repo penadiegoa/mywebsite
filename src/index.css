@@ -1,12 +1,16 @@
+html {
+  height: 100%;
+} 
+
 body {
   margin: 0;
-  height: 100vh;
+  /* min-height: 100%; */
   color: white;
   font-family: 'Roboto', sans-serif;
   font-size: calc(12px + 1vmin);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(3,37,76);
+  /* background: rgb(3,37,76); */
   background: linear-gradient(
     135deg, 
     rgba(3,37,76,1) 0%, 

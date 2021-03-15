@@ -1,6 +1,7 @@
-import { useEffect, useState } from 'react';
-import Quote from './Quote';
 import axios from 'axios';
+import { useEffect, useState } from 'react';
+
+import Quote from './Quote';
 import './Home.css';
 
 const Home = () => {
@@ -25,7 +26,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="home">
+    <div className="comp-container">
       <div className="home-content">
         <div className="welcome-title">Hi, welcome to Diego's World!</div>
         <div className="welcome-body">Feel free to explore some of the projects I have built, as well as my latest resume.</div>
