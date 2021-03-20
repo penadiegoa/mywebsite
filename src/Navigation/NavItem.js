@@ -24,6 +24,7 @@ const NavItem = props => {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
       >
+      {/* {props.icon} */}
       <a href={props.to} className="nav-item-link">{props.title}</a>
       {open && props.children}
     </li>

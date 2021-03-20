@@ -1,21 +1,23 @@
-import './App.css';
-import Home from './Home/Home';
-import Resume from './Resume/Resume';
-import Problems from './Problems/Problems';
-import Projects from './Projects/Projects';
 import { 
   Route, 
   Switch, 
   Redirect, 
   BrowserRouter as Router,
 } from 'react-router-dom';
+
+import './App.css';
+import Home from './Home/Home';
 import NavBar from './Navigation/NavBar';
 import NavItem from './Navigation/NavItem';
 import NavDropdown from './Navigation/NavDropdown';
+import Projects from './Projects/Projects';
+import Tictactoe from './Projects/Tictactoe/Tictactoe';
+import Todo from './Projects/Todo/Todo';
+import Problems from './Problems/Problems';
 import Leetcode from './Problems/CS/Leetcode';
 import Physics from './Problems/Physics/Physics';
-import Game from './Projects/Tictactoe/Game';
-import Todo from './Projects/Todo/Todo';
+import Resume from './Resume/Resume';
+import { GiTicTacToe } from 'react-icons/gi';
 
 
 const App = () => {
@@ -28,7 +30,7 @@ const App = () => {
             <NavItem to="/" title="Home" exact/>
             <NavItem to="/projects" title="Projects">
               <NavDropdown>
-                <NavItem to="/projects/tictactoe" title="Tic-Tac-Toe"/>
+                <NavItem to="/projects/tictactoe" title="Tic-Tac-Toe" icon={<GiTicTacToe/>}/>
                 <NavItem to="/projects/todo" title="To Do"/>
               </NavDropdown>
             </NavItem>
@@ -52,7 +54,7 @@ const App = () => {
             </Route>
 
             <Route path="/projects/tictactoe">
-              <Game/>
+              <Tictactoe/>
             </Route>
             <Route path="/projects/todo">
               <Todo/>
